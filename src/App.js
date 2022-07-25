@@ -12,7 +12,6 @@ import AppBar from './components/AppBar/AppBar';
 import PrivateRoute from './components/PrivateRoute';
 import PublicRoute from './components/PublicRoute';
 
-const HomePage = lazy(() => import('./pages/HomePage'));
 const ContactsPage = lazy(() => import('./pages/ContactsPage'));
 const RegisterPage = lazy(() => import('./pages/RegisterPage'));
 const LoginPage = lazy(() => import('./pages/LoginPage'));

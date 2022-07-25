@@ -3,19 +3,16 @@ import { authSelectors, authOperations } from '../../redux/auth';
 
 import s from './UserMenu.module.css';
 
+import avatar from './avatar.png';
+import avatar1 from './image/user_female-512.png';
+
 export default function UserMenu() {
   const dispatch = useDispatch();
   const name = useSelector(authSelectors.getUsername);
 
   return (
     <div className={s.container}>
-      <img
-        className={s.avatar}
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/800px-User_icon_2.svg.png"
-        title="User avatar"
-        alt="Avatar"
-        width={32}
-      />
+      <img className={s.avatar} scr={avatar1} alt="Avatar" width={32} />
       <span>Welcome,</span>
       <span className={s.name}> {name}</span>
       <button
