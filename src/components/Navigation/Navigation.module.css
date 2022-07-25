@@ -1,0 +1,8 @@
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: bold;
+  color: var(--primary-text-color);
+  font-size: 22px;
+}

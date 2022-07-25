@@ -1,0 +1,38 @@
+.list {
+  margin-bottom: 15px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid var(--border-form-color);
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+button {
+  display: block;
+  font-size: 18px;
+  padding: 8px 12px;
+  font-weight: var(--primary-font-weight);
+  background-color: red;
+  border: 2px solid red;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+button:hover,
+button:focus {
+  background-color: #f80e0e75;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  border: 2px solid red;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
