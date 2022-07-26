@@ -3,21 +3,19 @@ import { authSelectors, authOperations } from '../../redux/auth';
 
 import s from './UserMenu.module.css';
 
-import avatar1 from './image/user_female-512.png';
+import avatar from './image/User_icon_1.svg.png';
 
 export default function UserMenu() {
   const dispatch = useDispatch();
   const name = useSelector(authSelectors.getUsername);
-  const avatar = `https://tanyaduka.github.io${avatar1}`;
-  console.log(avatar);
+
   return (
     <div className={s.container}>
-      <img className={s.avatar} scr={avatar1} alt="Avatar" width={32} />
-      <img className={s.avatar} scr={avatar} alt="Avatar" width={32} />
       <img
         className={s.avatar}
-        scr="https://klike.net/uploads/posts/2019-03/1551511808_5.jpg"
-        alt="Avatar1"
+        src={avatar}
+        title="User avatar"
+        alt="Avatar"
         width={32}
       />
 
