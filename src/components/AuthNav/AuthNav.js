@@ -4,6 +4,7 @@ import s from './AuthNav.module.css';
 
 export default function AuthNav() {
   return (
+    
     <nav>
       <NavLink
         to="/register"
