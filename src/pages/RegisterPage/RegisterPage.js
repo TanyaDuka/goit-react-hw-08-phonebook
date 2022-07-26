@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { useDispatch } from 'react-redux';
-import { authOperations } from '../redux/auth';
+import { authOperations } from '../../redux/auth';
 
 import s from './RegisterPage.module.css';
 
@@ -38,6 +38,15 @@ export default function LoginPage() {
     setName('');
     setEmail('');
     setPassword('');
+    dispatch(authOperations.logIn({ email, password })).then(({ meta }) => {
+      console.log(meta);
+      console.log(meta.requestStatus);
+      if (meta.requestStatus === 'fulfilled') {
+        setName('');
+        setEmail('');
+        setPassword('');
+      }
+    });
   };
 
   return (

@@ -12,6 +12,16 @@ export default function UserMenu() {
   return (
     <div className={s.container}>
       <img className={s.avatar} scr={avatar1} alt="Avatar" width={32} />
+            <img className={s.avatar} scr={avatar1} alt="Avatar" width={32} />
+
+
+      <img
+        className={s.avatar}
+        scr="https://klike.net/uploads/posts/2019-03/1551511808_5.jpg"
+        alt="Avatar1"
+        width={32}
+      />
+
       <span>Welcome,</span>
       <span className={s.name}> {name}</span>
       <button

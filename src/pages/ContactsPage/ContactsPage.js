@@ -1,10 +1,10 @@
 // import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import contactsOperations from '../redux/phonebook-operations';
+import contactsOperations from '../../redux/phonebook-operations';
 
-import ContactsForm from '../components/ContactForm';
-import Filter from '../components/Filter';
-import ContactsList from '../components/ContactList';
+import ContactsForm from '../../components/ContactForm';
+import Filter from '../../components/Filter';
+import ContactsList from '../../components/ContactList';
 
 import 'react-toastify/dist/ReactToastify.css';
 import s from './ContactsPage.module.css';

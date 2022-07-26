@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { useDispatch } from 'react-redux';
-import { authOperations } from '../redux/auth';
+import { authOperations } from '../../redux/auth';
 
 import s from './LoginPage.module.css';
 
@@ -29,10 +29,13 @@ export default function LoginPage() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(authOperations.logIn({ email, password }));
 
-    setEmail('');
-    setPassword('');
+    dispatch(authOperations.logIn({ email, password })).then(({ meta }) => {
+      if (meta.requestStatus === 'fulfilled') {
+        setEmail('');
+        setPassword('');
+      }
+    });
   };
 
   return (

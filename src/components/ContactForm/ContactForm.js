@@ -32,7 +32,9 @@ export default function ContactsForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const similarContact = contacts.find(contact => contact.name === name);
+    const similarContact = contacts.find(
+      contact => contact.name.toLowerCase() === name.toLowerCase()
+    );
 
     if (similarContact) {
       return toast.error(`${similarContact.name} is already in your list`);

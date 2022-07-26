@@ -7,8 +7,8 @@ import { Suspense, lazy } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Container from './components/Container/Container';
-import AppBar from './components/AppBar/AppBar';
+import Container from './components/Container';
+import AppBar from './components/AppBar';
 import PrivateRoute from './components/PrivateRoute';
 import PublicRoute from './components/PublicRoute';
 
@@ -42,31 +42,6 @@ export default function App() {
             </Route>
 
             <Route path="*" element={<Navigate replace to="/" />} />
-
-            <Route
-              path="contacts"
-              element={
-                <PrivateRoute>
-                  <ContactsPage />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="register"
-              element={
-                <PublicRoute>
-                  <RegisterPage />
-                </PublicRoute>
-              }
-            />
-            <Route
-              path="login"
-              element={
-                <PublicRoute>
-                  <LoginPage />
-                </PublicRoute>
-              }
-            />
           </Routes>
         </Suspense>
         <ToastContainer />
